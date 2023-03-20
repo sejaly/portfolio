@@ -1,0 +1,82 @@
+@import url(../../Globe.scss);
+.TopBar{
+    background-color: rgba(21, 21, 21, 0.447);
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top:0;
+    z-index: 3;
+    transition: all 1s ease;
+    .wrap{
+        padding: 10px , 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .left{
+        display: flex;
+        align-items: center;
+       .logo{
+        text-decoration: none;
+        font-size: 40px;
+        font-weight: 700;
+        color:rgb(12, 12, 12);
+        margin-right: 40px;
+       }
+       .item{
+        display: flex;
+        align-items: center;
+        margin-left: 30px;
+
+
+
+       }
+       .icon{
+        font-size: 18px;
+        margin-right: 5px;
+       }
+       span{
+        font-size: 22px;
+        font-weight: 700;
+        
+       }
+    }
+    .right{
+        .line{
+            width: 32px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        
+        }
+        span{
+            width: 100%;
+            height: 3px;
+            background-color: rgb(8, 8, 8);
+            transform-origin: left;
+            transition: all 2s ease;
+        }
+    }
+    &.active{
+        background-color: blanchedalmond;
+        .line{
+            span{
+                &:first-child{
+                    background-color: rgb(20, 20, 19);
+                    transform: rotate(45deg);
+                }
+                &:last-child{
+
+                    background-color: rgb(10, 10, 10);
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(2){
+                    opacity: 0;
+                }
+            }
+        }
+
+    }
+}
